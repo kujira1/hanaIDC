@@ -1,0 +1,107 @@
+"use strict";
+function initUI(){
+	const elemRoot=document.createElement("div");
+	{
+		const e=elemRoot;
+		const elemHeader=document.createElement("div");
+		{
+			const e=elemHeader;
+			e.style.display="flex";
+			e.style.alignItems="flex-end";
+			let isConnected=false;
+			const setConnected=function(walletAddress){
+				elemConnect.innerHTML=walletAddress;
+				isConnected=true;
+			};
+			const setDisconnected=function(){
+				elemConnect.innerHTML="Connect";
+				isConnected=false;
+			};
+			const elemConnect=document.createElement("");
+			{
+				const e=elemConnect;
+				e.style.cursor="pointer";
+				e.style.padding="20px 45px";
+				e.style.borderRadius="5px";
+				e.style.backgroundColor="#00C4F4";
+				e.style.color="#ffffff";
+				e.addEventListener("click",function(){
+					if(!isConnected){
+						connect();
+					}
+				});
+
+
+
+
+
+				e.innerHTML="Connect";
+			}
+			e.appendChild(elemConnect);
+			addWalletConnectHandler("connect0",function(walletAddress){
+				setConnected(walletAddress);
+				window.location.href="./coinlist.html";
+			});
+		}
+		e.appendChild(elemHeader);
+		/*
+		const elemBody=document.createElement("div");
+		{
+			const e=elemBody;
+			e.style.padding="8px";
+			for(const token of tokens){
+				const elemToken=document.createElement("div");
+				{
+					const e=elemToken;
+					e.style.display="flex";
+					const elemKey=document.createElement("div");
+					{
+						const e=elemKey;
+						e.style.width="128px";
+						e.innerHTML=token.name;
+					}
+					e.appendChild(elemKey);
+					const elemVal=document.createElement("div");
+					{
+						const e=elemVal;
+						e.innerHTML="Locked";
+						e.style.width="128px";
+						addWalletConnectHandler("token"+token.name,function(walletAddress){							
+							e.innerHTML="Loading...";
+							token.getBalance().then(function(normalized){
+								e.innerHTML=Math.floor(10000*normalized)/10000;
+							});
+						});
+						addTokenBalanceHandler(token.name,function(walletAddress){
+							e.innerHTML="Loading...";
+							token.getBalance().then(function(normalized){
+								e.innerHTML=Math.floor(10000*normalized)/10000;
+							});
+						});
+					}
+					e.appendChild(elemVal);
+					const elemSend=document.createElement("div");
+					{
+						const e=elemSend;
+						e.style.padding="4px";
+						e.style.cursor="pointer";
+						e.style.borderRadius="20px";
+						e.style.backgroundColor="#a0a0ff";
+						e.style.color="#ffffff";
+						e.innerHTML="Send";
+						e.addEventListener("click",function(){
+							showSendDialog(token);
+						});
+					}
+					e.appendChild(elemSend);
+				}
+				e.appendChild(elemToken);
+			}
+		}
+		e.appendChild(elemBody);
+		*/
+	}
+	return elemRoot;
+}
+const elemRoot=initUI();
+document.body.appendChild(elemRoot);
