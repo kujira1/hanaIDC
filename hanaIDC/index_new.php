@@ -1,175 +1,6 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Bigtech - ICO & Crypto Landing Page Template</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-        <!-- Place favicon.ico in the root directory -->
-		<script src="./js/ethers.umd.min.js"></script>
-		<script src="./js/web-wallet.js"></script>
-        <!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="assets/css/mCustomScrollbar.min.css">
-        <link rel="stylesheet" href="assets/css/odometer.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/default.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-    </head>
-    <body class="white-background">
-
-        <!-- Preloader -->
-        <div id="preloader">
-            <div class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-        <!-- Preloader -->
-
-        <!-- header-area -->
-        <header id="header">
-            <div id="sticky-header" class="menu-area menu-style-two transparent-header">
-                <div class="container custom-container-three">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
-                            <div class="menu-wrap">
-                                <nav class="menu-nav">
-                                    <div class="logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                    </div>
-                                    <div class="navbar-wrap main-menu d-none d-lg-flex">
-                                        <ul class="navigation">
-                                            <li><a href="#header" class="section-link">Home</a> </li>
-                                            <li><a href="#about" class="section-link">Learning Center</a></li>
-                                            <li><a href="#roadmap" class="section-link">M2E</a></li>
-                                            <li><a href="#faq" class="section-link">My ChaT</a></li>
-                                            <li><a href="blog.html">Hana IDC</a> </li>
-                     
-                                        </ul>
-                                    </div>
-                                    <div class="header-action d-none d-md-block">
-                                        <ul>
-                                            <li class="header-lang"><span class="selected-lang">ENG</span>
-                                                <ul class="lang-list">
-                                                    <li><a href="#">IND</a></li>
-                                                    <li><a href="#">BNG</a></li>
-                                                    <li><a href="#">TUR</a></li>
-                                                    <li><a href="#">CIN</a></li>
-                                                </ul>
-                                            </li>
-      <li class="header-btn">
-  <script>
-    function initUI(){
-      const elemRoot=document.createElement("div");
-      const elemHeader=document.createElement("div");
-      const elemConnect=document.createElement("div");
-      let isConnected=false;
-
-      const setConnected=function(walletAddress){
-        elemConnect.innerHTML=walletAddress;
-        isConnected=true;
-      };
-
-      const setDisconnected=function(){
-        elemConnect.innerHTML="Connect";
-        isConnected=false;
-      };
-
-      const connectHandler=function(){
-        if(!isConnected){
-          connect();
-        }
-      };
-
-      const addWalletConnect=function(){
-        addWalletConnectHandler("connect0",function(walletAddress){
-          setConnected(walletAddress);
-          window.location.href="./coinlist.html";
-        });
-      };
-
-      const styleConnect=function(){
-        const e=elemConnect;
-        e.style.cursor="pointer";
-        e.style.padding="20px 45px";
-        e.style.borderRadius="5px";
-        e.style.backgroundColor="#00C4F4";
-        e.style.color="#ffffff";
-        e.innerHTML="Connect";
-        e.addEventListener("click",connectHandler);
-      };
-
-      const styleHeader=function(){
-        const e=elemHeader;
-        e.style.display="flex";
-        e.style.alignItems="flex-end";
-        e.appendChild(elemConnect);
-      };
-
-      const styleRoot=function(){
-        const e=elemRoot;
-        e.appendChild(elemHeader);
-      };
-
-      const init=function(){
-        addWalletConnect();
-        styleConnect();
-        styleHeader();
-        styleRoot();
-      };
-
-      init();
-      return elemRoot;
-    }
-
-    const elemRoot=initUI();
-    document.querySelector(".header-btn").appendChild(elemRoot);
-  </script>  
-</li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                            <!-- Mobile Menu  -->
-                            <div class="mobile-menu">
-                                <nav class="menu-box">
-                                    <div class="close-btn"><i class="fas fa-times"></i></div>
-                                    <div class="nav-logo"><a href="index.html"><img src="assets/img/logo/logo.png" alt="" title=""></a>
-                                    </div>
-                                    <div class="menu-outer">
-                                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
-                                    </div>
-                                    <div class="social-links">
-                                        <ul class="clearfix">
-                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                            <div class="menu-backdrop"></div>
-                            <!-- End Mobile Menu -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- header-area-end -->
-
+<?php
+include './inc/header.php';
+?>
 
         <!-- main-area -->
         <main>
@@ -260,8 +91,8 @@
                         <div class="col-lg-6">
                             <div class="section-title text-center mb-70">
                                 <span class="sub-title"><font color="#f97f09">C</font>reative <font color="#f97f09">ha</font>naidc <font color="#f97f09">T</font>oken</span>
-                                <h2 class="title">
-ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem 
+                                <h3 class="title">
+ChaT 토큰 </h3>
                             </div>
                         </div>
                     </div>
@@ -326,8 +157,8 @@ ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem
                                         <img src="assets/img/icon/counter_icon01.svg" alt="">
                                     </div>
                                     <div class="counter-content">
-                                        <h2 class="count"><span class="odometer" data-count="280"></span>K</h2>
-                                        <p>Active Installation</p>
+                                        <h2 class="count"><span class="odometer" data-count="100"></span>억 Chat</h2>
+                                        <p>Chat 토큰 발행량</p>
                                     </div>
                                 </div>
                             </div>
@@ -337,8 +168,8 @@ ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem
                                         <img src="assets/img/icon/counter_icon01.svg" alt="">
                                     </div>
                                     <div class="counter-content">
-                                        <h2 class="count"><span class="odometer" data-count="250"></span>K</h2>
-                                        <p>Active Installation</p>
+                                        <h2 class="count">BEP-20기반 </h2>
+                                        <p>바이낸스 스마트 체인</p>
                                     </div>
                                 </div>
                             </div>
@@ -348,8 +179,8 @@ ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem
                                         <img src="assets/img/icon/counter_icon01.svg" alt="">
                                     </div>
                                     <div class="counter-content">
-                                        <h2 class="count"><span class="odometer" data-count="230"></span>K</h2>
-                                        <p>Active Installation</p>
+                                        <h2 class="count">Contract 주소</h2>
+                                        <p>0x983f6d60db79ea8ca4eb996</p>
                                     </div>
                                 </div>
                             </div>
@@ -359,7 +190,8 @@ ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem
             </section>
             <!-- counter-area-end -->
 
-            <!-- roadmap-area -->
+
+			<!-- roadmap-area -->
             <section id="roadmap" class="roadmap-area-two pt-130 pb-100">
                 <div class="container custom-container-two">
                     <div class="row justify-content-center">
@@ -448,7 +280,7 @@ ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem
 
             <!-- team-area -->
             <section class="team-area-two team-bg">
-                    
+
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
@@ -470,7 +302,7 @@ ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem
                         </div>
                     </div>
                 </div>
-      
+
             </section>
             <!-- team-area-end -->
 
@@ -678,80 +510,6 @@ ChaT 토큰의 </h2><h2 class="title">Economic Ecosystem
         </main>
         <!-- main-area-end -->
 
-
-        <!-- footer-area -->
-        <footer>
-            <div class="footer-area-two">
-                <div class="container custom-container-four">
-                    <div class="footer-top">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="footer-menu-two">
-                                    <ul class="navigation">
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Roadmap</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Career</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="footer-social">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-bottom">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="copyright-text">
-                                    <p>Copyright &copy; 2022. All Rights Reserved Bigtech</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="scroll-up text-center">
-                                    <button class="scroll-to-target" data-target="html"><i class="fas fa-arrow-up"></i></button>
-                                    <span>scroll Top</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="footer-bottom-menu">
-                                    <ul>
-                                        <li><a href="#">Terms of Service</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer-area-end -->
-
-
-
-
-        <!-- JS here -->
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.odometer.min.js"></script>
-        <script src="assets/js/jquery.countdown.min.js"></script>
-        <script src="assets/js/jquery.knob.min.js"></script>
-        <script src="assets/js/jquery-countdowngampang.min.js"></script>
-        <script src="assets/js/jquery.ba-throttle-debounce.min.js"></script>
-        <script src="assets/js/jquery.mCustomScrollbar.min.js"></script>
-        <script src="assets/js/jarallax.min.js"></script>
-        <script src="assets/js/jquery.appear.js"></script>
-        <script src="assets/js/jquery.easing.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
-</html>
+<?php
+include './inc/footer.php';
+?>

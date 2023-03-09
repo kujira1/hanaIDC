@@ -118,6 +118,12 @@
 .breadcrumb-content .title {
 	font-size: 50px;
 }
+.breadcrumb-bg2 {
+	padding: 180px 0 120px;
+}
+.breadcrumb-bg3 {
+	padding: 180px 0 120px;
+}
 .breadcrumb-bg {
 	padding: 180px 0 120px;
 }
@@ -1025,6 +1031,12 @@
 	padding: 40px 0 30px;
 }
 .breadcrumb-bg {
+	padding: 160px 0 100px;
+}
+.breadcrumb-bg2 {
+	padding: 160px 0 100px;
+}
+.breadcrumb-bg3 {
 	padding: 160px 0 100px;
 }
 .breadcrumb-content .breadcrumb-item+.breadcrumb-item {

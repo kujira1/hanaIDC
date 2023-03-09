@@ -98,18 +98,38 @@ function waitFor(t){
 async function waitForEthereum(){
 	while(true){
 		console.log("Waiting for 0.1s");
-		await waitFor(100);
 		const ethereum=getTrustWalletProvider();
 		if(ethereum!=null){
 			return ethereum;
 		}
+		await waitFor(100);
 	}
 }
 async function connect(){
-	const ethereum=await waitForEthereum();
+	let ethereum=await waitForEthereum();
 	if(ethereum){
 		provider=new ethers.providers.Web3Provider(ethereum);
 		try{
+			const network=await provider.getNetwork(); //현재 네트워크 가져오기
+			if(56!=network.chainId){ // 만약 chainId가 56번(바이낸스체인)이 아니면
+				const result=await new Promise(function(resolve){
+					provider.send("wallet_switchEthereumChain",[{chainId:"0x38"}]);
+					ethereum.on("networkChanged",function(e){
+						console.log(e);
+						if(e==56){
+							resolve(0);
+						}else{
+							resolve(-1);
+						}
+					});
+				});
+				if(result==0){
+					ethereum=await waitForEthereum();
+					provider=new ethers.providers.Web3Provider(ethereum);
+				}else{
+					return result;
+				}
+			}
 			await provider.send("eth_requestAccounts",[]);
 			ethereum.on("accountsChanged",async function(accounts){
 				console.log("AccountsChanged");
@@ -121,14 +141,21 @@ async function connect(){
 					handler(walletAddress);
 				}
 			});
+			ethereum.on("networkChanged",function(chainId){
+				if(chainId!=56){
+					window.location.href="./main.html";
+				}
+			});
 			signer=await provider.getSigner();
 			walletAddress=await signer.getAddress();
 			for(let key in walletConnectHandlers){
 				const handler=walletConnectHandlers[key];
 				handler(walletAddress);
 			}
+			return 0;
 		}catch(e){
 			console.error(e);
+			return-2;
 		}
 	}
 }

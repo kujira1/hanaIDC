@@ -8,11 +8,6 @@ function preloader() {
 	$('#preloader').delay(0).fadeOut();
 };
 
-$(window).on('load', function () {
-	preloader();
-	mainSlider();
-	wowAnimation();
-});
 
 
 

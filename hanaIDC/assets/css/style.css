@@ -1182,11 +1182,47 @@ label {
 	width: 100%;
 	height: 19px;
 }
+.breadcrumb-bg2 {
+	background-image: url(../img/bg/breadcrumb-bg2.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	padding: 235px 0 150px;
+}
+.breadcrumb-bg2::before {
+	position: absolute;
+	content: "";
+	background-image: url(../img/bg/breadcrumb_shape2.png);
+	background-repeat: repeat;
+	background-position: center;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	height: 19px;
+}
+.breadcrumb-bg3 {
+	background-image: url(../img/bg/breadcrumb-bg3.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	padding: 235px 0 150px;
+}
+.breadcrumb-bg3::before {
+	position: absolute;
+	content: "";
+	background-image: url(../img/bg/breadcrumb_shape3.png);
+	background-repeat: repeat;
+	background-position: center;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	height: 19px;
+}
 .breadcrumb-content {
 	text-align: center;
 }
 .breadcrumb-content .title {
-	font-size: 65px;
+	font-size: 55px;
 	margin-bottom: 30px;
 	letter-spacing: -0.01em;
 	line-height: 1.15;
@@ -3378,7 +3414,7 @@ label {
 
 /* footer-three */
 .footer-bg {
-	background-image: url(../img/bg/breadcrumb-bg.jpg);
+	background-image: url(../img/bg/breadcrumb-bg2.jpg);
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -3474,6 +3510,7 @@ label {
 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
 	background-color: #00c2f2;
 }
+
 
 /* 21. Preloader */
 #preloader {

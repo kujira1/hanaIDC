@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coinlist</title>
-	<script src="./js/ethers.umd.min.js"></script>
-	<script src="./js/web-wallet.js"></script>
-  </head>
+<?php include './inc/header.php';?>
+
+        <!-- main-area -->
+<?php include './inc/idc01.php';?>
+
+
   <style>
     body {
       font-size: 16px;
@@ -95,11 +91,12 @@
           <div class="list-wrapper">
             <div class="token">FIL</div>
             <div id="FILBalance" class="balance">0</div>
-          </div>         
+          </div>
           </div>
         </div>
       </div>
     </div>
-	<script src="./js/coinlist.js"></script>
-  </body>
-</html>
+
+<?php
+include './inc/footer.php';
+?>

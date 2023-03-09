@@ -21,13 +21,12 @@ const setDisconnected=function(){
         }
       };
 
-      const addWalletConnect=function(){
-        addWalletConnectHandler("connect0",function(walletAddress){
-          setConnected(walletAddress);
-     
-        });
-      };
-
+const addWalletConnect=function(){
+  addWalletConnectHandler("connect0",function(walletAddress){
+    setConnected(walletAddress);
+    // window.location.href="./coinlist.php";
+  });
+};
       const styleConnect=function(){
         const e=elemConnect;
         e.style.cursor="pointer";

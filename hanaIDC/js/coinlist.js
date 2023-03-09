@@ -5,7 +5,7 @@ async function initUI(){
 	elemWallet.innerHTML=walletAddress;
 	const elemTransfer=document.getElementById("ButtonTransfer");
 	elemTransfer.addEventListener("click",function(){
-		window.location.href="./transfer.html";
+		window.location.href="./transfer.php";
 	});
 	const tokenList=[
 		{key:"BNB",id:"BNBBalance"},
